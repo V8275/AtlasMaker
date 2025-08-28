@@ -28,22 +28,22 @@
                 </LinearGradientBrush>
             </Grid.Background>
         </Grid>
-        <Button Content="Set Images" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,330,0,0" Click="SetImages" Height="42" Width="218"/>
-        <Button Content="Build Atlas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,285,0,0" Click="BuildAtlas" Height="45" Width="218"/>
+        <Button Content="Set Images" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,341,0,0" Click="SetImages" Height="42" Width="218"/>
+        <Button Content="Build Atlas" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,290,0,0" Click="BuildAtlas" Height="46" Width="218"/>
 
-        <StackPanel Margin="0,0,14,291" Background="Black" Visibility="Hidden">
-            <StackPanel Orientation="Horizontal" Height="76" Width="186" Background="#FF3A3A3A" Visibility="Hidden">
-                <TextBox x:Name="img_width" TextWrapping="Wrap" Text="Image width" Height="30" Width="90" Visibility="Hidden"/>
-                <TextBox x:Name="img_height" TextWrapping="Wrap" Text="Image height" Height="30" Width="94" Margin="1,0,0,0" Visibility="Hidden"/>
+        <StackPanel Margin="13,15,1,242" Background="Black" >
+            <StackPanel Orientation="Horizontal" Height="76" Width="186" Background="#FF3A3A3A" >
+                <TextBox x:Name="img_width" TextWrapping="Wrap" Text="Image width" Height="30" Width="90"/>
+                <TextBox x:Name="img_height" TextWrapping="Wrap" Text="Image height" Height="30" Width="94" Margin="1,0,0,0" />
             </StackPanel>
-            <Button Content="Set Image Size" Click="Button_Click" Height="56" Width="206" Margin="5,5,5,0" Visibility="Hidden"/>
+            <Button Content="Set Image Size" Click="Button_Click" Height="56" Width="206" Margin="5,5,5,0"/>
         </StackPanel>
         <StackPanel HorizontalAlignment="Left" Height="142" Margin="0,143,0,0" VerticalAlignment="Top" Width="218" Background="Black" Visibility="Hidden">
             <StackPanel Height="77" Orientation="Horizontal" Background="#FF3A3A3A" Width="182" Visibility="Hidden">
                 <TextBox x:Name="atlas_height" TextWrapping="Wrap" Text="Atlas height" Height="30" Width="90" Visibility="Hidden"/>
-                <TextBox x:Name="atlas_width" TextWrapping="Wrap" Text="Atlas width" Height="30" Width="90" Margin="1,0,0,0" Visibility="Hidden"/>
+                <TextBox x:Name="atlas_width" TextWrapping="Wrap" Text="Atlas width" Height="30" Width="90" Margin="1,0,0,0" Visibility="Hidden" />
             </StackPanel>
-            <Button Content="Set Atlas Size" Click="Button_Click_1" Height="52" Width="218" Margin="5,5,5,0" Visibility="Hidden"/>
+            <Button Content="Set Atlas Size" Click="Button_Click_1" Height="52" Width="218" Margin="5,5,5,0" Visibility="Hidden" />
         </StackPanel>
     </Grid>
 </Window>

@@ -17,3 +17,4 @@ D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\refint\TextureMaker
 D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureMaker.pdb
 D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureMaker.genruntimeconfig.cache
 D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\ref\TextureMaker.dll
+D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureMaker.sourcelink.json

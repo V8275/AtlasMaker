@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\
+D:\Projects\VSProjects\TextureMaker\obj\Release\net9.0-windows\
 TextureMaker
 none
 false
-TRACE;DEBUG;NET;NET9_0;NETCOREAPP
+TRACE;RELEASE;NET;NET9_0;NETCOREAPP
 D:\Projects\VSProjects\TextureMaker\App.xaml
 11407045341
 
-101012159573
+102089172615
 201668129756
 MainWindow.xaml;
 
