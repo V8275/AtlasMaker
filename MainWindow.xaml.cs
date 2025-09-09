@@ -5,6 +5,7 @@ using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Microsoft.Win32;
+using TextureMaker.Core;
 
 namespace TextureMaker
 {
@@ -18,12 +19,14 @@ namespace TextureMaker
 
         private GameAtlas atlas;
         private GameSprite[] sprites;
+        RGBCombineManager rgbManager;
 
         public MainWindow()
         {
             InitializeComponent();
             atlas = new GameAtlas();
             sprites = new GameSprite[0];
+            rgbManager = new RGBCombineManager();
         }
 
         /// <summary>
@@ -51,26 +54,6 @@ namespace TextureMaker
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// set atlas size
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            string width = atlas_width.Text;
-            string height = atlas_height.Text;
-
-            int sX = atlas != null ? (int)atlas.Size.X : 512;
-            int sY = atlas != null ? (int)atlas.Size.Y : 512;
-
-            atlasSize.X = NewSize(width, sX);
-            atlasSize.Y = NewSize(height, sY);
-
-            if (atlas != null)
-                atlas.SetSize(atlasSize);
         }
 
         private void SetImages(object sender, RoutedEventArgs e)
@@ -130,20 +113,20 @@ namespace TextureMaker
 
         private void ShowImages()
         {
-            ItemViewer.Children.Clear();
-            ItemViewer.RowDefinitions.Clear();
-            ItemViewer.ColumnDefinitions.Clear();
+            ImageArray.Children.Clear();
+            ImageArray.RowDefinitions.Clear();
+            ImageArray.ColumnDefinitions.Clear();
 
-            int columns = 2;
+            int columns = 5;
             for (int i = 0; i < columns; i++)
             {
-                ItemViewer.ColumnDefinitions.Add(new ColumnDefinition());
+                ImageArray.ColumnDefinitions.Add(new ColumnDefinition());
             }
 
             int rows = (sprites.Length + columns - 1) / columns;
             for (int i = 0; i < rows; i++)
             {
-                ItemViewer.RowDefinitions.Add(new RowDefinition());
+                ImageArray.RowDefinitions.Add(new RowDefinition());
             }
 
             for (int i = 0; i < sprites.Length; i++)
@@ -158,8 +141,13 @@ namespace TextureMaker
                 Grid.SetRow(image, i / columns);
                 Grid.SetColumn(image, i % columns);
 
-                ItemViewer.Children.Add(image);
+                ImageArray.Children.Add(image);
             }
+        }
+
+        private void ShowImage()
+        {
+
         }
     }
 }

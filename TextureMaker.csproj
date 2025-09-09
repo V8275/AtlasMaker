@@ -6,6 +6,15 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg" />
+  </ItemGroup>
 
 </Project>

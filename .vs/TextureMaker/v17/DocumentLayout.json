@@ -7,24 +7,16 @@
       "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\core\\rgbcombinemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:core\\rgbcombinemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\core\\gameitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:core\\gameitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\gameitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:gameitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\bitmapsaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:bitmapsaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\gamesprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:gamesprite.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\gameatlas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:gameatlas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,44 +26,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "GameAtlas.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\GameAtlas.cs",
-              "RelativeDocumentMoniker": "GameAtlas.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\GameAtlas.cs",
-              "RelativeToolTip": "GameAtlas.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAqwBkAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T12:39:35.991Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "GameItem.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\GameItem.cs",
-              "RelativeDocumentMoniker": "GameItem.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\GameItem.cs",
-              "RelativeToolTip": "GameItem.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAQwDYAAAAUAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\GameItem.cs",
+              "RelativeDocumentMoniker": "Core\\GameItem.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\GameItem.cs",
+              "RelativeToolTip": "Core\\GameItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T11:33:53.849Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-08T21:23:03.007Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GameSprite.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\GameSprite.cs",
-              "RelativeDocumentMoniker": "GameSprite.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\GameSprite.cs",
-              "RelativeToolTip": "GameSprite.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBEAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "RGBCombineManager.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\RGBCombineManager.cs",
+              "RelativeDocumentMoniker": "Core\\RGBCombineManager.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\RGBCombineManager.cs",
+              "RelativeToolTip": "Core\\RGBCombineManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T22:38:21.258Z",
+              "WhenOpened": "2025-09-08T21:03:23.433Z",
               "EditorCaption": ""
             },
             {
@@ -88,29 +67,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwDEAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T22:20:34.622Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BitmapSaver.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\BitmapSaver.cs",
-              "RelativeDocumentMoniker": "BitmapSaver.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\BitmapSaver.cs",
-              "RelativeToolTip": "BitmapSaver.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAiwBcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-28T13:08:42.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-26T22:20:34.622Z"
             }
           ]
         }

@@ -13,6 +13,7 @@ namespace TextureMaker
         public BitmapImage OriginalImage
         {
             get { return originalImage; }
+            set { originalImage = value; }
         }
 
         public Vector2 Size
@@ -26,12 +27,6 @@ namespace TextureMaker
             {
                 try
                 {
-                    // Проверка исходных размеров
-                    //if (originalImage.PixelWidth != 512 || originalImage.PixelHeight != 512)
-                    //{
-                    //    throw new ArgumentException("Исходное изображение должно быть 512x512 пикселей.");
-                    //}
-
                     _size = size;
 
                     // Создание масштабированного изображения
@@ -61,7 +56,5 @@ namespace TextureMaker
                 }
             }
         }
-
     }
-
 }
