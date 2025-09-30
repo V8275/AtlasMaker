@@ -10,6 +10,8 @@ namespace TextureMaker
         protected Vector2 _size;
         protected BitmapImage originalImage;
 
+        public GameItem() { }
+
         public BitmapImage OriginalImage
         {
             get { return originalImage; }
@@ -51,7 +53,6 @@ namespace TextureMaker
                 }
                 catch (Exception ex)
                 {
-                    // Обработка исключений
                     Console.WriteLine($"Ошибка при масштабировании изображения: {ex.Message}");
                 }
             }

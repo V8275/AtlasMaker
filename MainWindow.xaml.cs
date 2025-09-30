@@ -1,5 +1,6 @@
 ﻿using System.Numerics;
 using System.Text.RegularExpressions;
+using System.Threading.Channels;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
@@ -108,7 +109,6 @@ namespace TextureMaker
                     sprites[i] = new GameSprite(selectedFiles[i]);
                 }
             }
-
         }
 
         private void ShowImages()
@@ -145,9 +145,69 @@ namespace TextureMaker
             }
         }
 
-        private void ShowImage()
+        private void ShowImage(Image img, BitmapImage image)
         {
+            img.Source = image;
+            img.Stretch = Stretch.Uniform;
+        }
 
+        private void SetRedChannel(object sender, RoutedEventArgs e)
+        {
+            SetChannel(Channels.Red);
+        }
+
+        private void SetGreenChannel(object sender, RoutedEventArgs e)
+        {
+            SetChannel(Channels.Green);
+        }
+
+        private void SetBlueChannel(object sender, RoutedEventArgs e)
+        {
+            SetChannel(Channels.Blue);
+        }
+
+        private void SetAlphaChannel(object sender, RoutedEventArgs e)
+        {
+            SetChannel(Channels.Alpha);
+        }
+
+        private void SetChannel(Channels channel)
+        {
+            rgbManager.SetImage(channel);
+            var img = rgbManager.GetImage(channel);
+
+            switch (channel)
+            {
+                case Channels.Red:
+                    ShowImage(Red, img);
+                    break;
+                case Channels.Green:
+                    ShowImage(Green, img);
+                    break;
+                case Channels.Blue:
+                    ShowImage(Blue, img);
+                    break;
+                case Channels.Alpha:
+                    ShowImage(Alpha, img);
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void Render_Click(object sender, RoutedEventArgs e)
+        {
+            var result = rgbManager.CombineRGBA();
+
+            if (result != null)
+            {
+                ShowImage(Result, result);
+            }
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            rgbManager.SaveResult();
         }
     }
 }

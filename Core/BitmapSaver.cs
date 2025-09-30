@@ -12,17 +12,17 @@ namespace TextureMaker
 {
     static class BitmapSaver
     {
-        public static void SaveBitmapWithDialog(BitmapSource bitmap)
+        public static void SaveBitmapWithDialog(BitmapSource bitmap, string filter = "PNG Image|*.png|JPEG Image|*.jpg")
         {
             if (bitmap == null)
             {
-                MessageBox.Show("Ошибка: Нет данных для построения атласа.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Ошибка: Нет данных.", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             var saveFileDialog = new SaveFileDialog
             {
-                Filter = "PNG Image|*.png|JPEG Image|*.jpg",
+                Filter = filter,
                 Title = "Сохранить изображение",
                 DefaultExt = ".png"
             };

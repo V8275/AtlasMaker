@@ -3,20 +3,13 @@
   "WorkspaceRootPath": "D:\\Projects\\VSProjects\\TextureMaker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\core\\rgbcombinemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:core\\rgbcombinemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|..\\OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\opentkproject\\openwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\core\\gameitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:core\\gameitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|..\\OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\opentkproject\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|..\\OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,52 +24,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GameItem.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\GameItem.cs",
-              "RelativeDocumentMoniker": "Core\\GameItem.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\GameItem.cs",
-              "RelativeToolTip": "Core\\GameItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
+              "Title": "Shader.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\OpenTKProject\\Shader.cs",
+              "RelativeDocumentMoniker": "..\\OpenTKProject\\Shader.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\OpenTKProject\\Shader.cs",
+              "RelativeToolTip": "..\\OpenTKProject\\Shader.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T21:23:03.007Z",
+              "WhenOpened": "2025-09-28T10:22:50.483Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "RGBCombineManager.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\RGBCombineManager.cs",
-              "RelativeDocumentMoniker": "Core\\RGBCombineManager.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\RGBCombineManager.cs",
-              "RelativeToolTip": "Core\\RGBCombineManager.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
+              "Title": "OpenWindow.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\OpenTKProject\\OpenWindow.cs",
+              "RelativeDocumentMoniker": "..\\OpenTKProject\\OpenWindow.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\OpenTKProject\\OpenWindow.cs",
+              "RelativeToolTip": "..\\OpenTKProject\\OpenWindow.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-08T21:03:23.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "MainWindow.xaml",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml",
-              "RelativeToolTip": "MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-08-26T22:20:36.345Z",
+              "WhenOpened": "2025-09-28T09:55:52.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAAxAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\OpenTKProject\\Program.cs",
+              "RelativeDocumentMoniker": "..\\OpenTKProject\\Program.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\OpenTKProject\\Program.cs",
+              "RelativeToolTip": "..\\OpenTKProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-26T22:20:34.622Z",
+              "WhenOpened": "2025-09-28T09:34:48.38Z",
               "EditorCaption": ""
             }
           ]

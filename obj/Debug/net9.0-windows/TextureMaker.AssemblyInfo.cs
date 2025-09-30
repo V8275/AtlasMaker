@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TextureMaker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8f15dd53a5c835a7f7fba3660500ddbcfe984355")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8534486b1c3c38b2fa29baf39186ba34e08c0ac4")]
 [assembly: System.Reflection.AssemblyProductAttribute("TextureMaker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TextureMaker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

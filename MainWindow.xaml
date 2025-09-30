@@ -29,27 +29,51 @@
                 <StackPanel x:Name="R" Margin="0,35,0,0" HorizontalAlignment="Left" Width="120" Height="163" VerticalAlignment="Top">
                     <Image x:Name="Red" Height="100" Width="100" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
                     <Label Content="Red&#xD;&#xA;" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
-                    <Button Content="Select" Margin="0,7,0,0"/>
+                    <Button Content="Select" Margin="0,7,0,0" Click="SetRedChannel"/>
                 </StackPanel>
                 <StackPanel x:Name="G" Margin="212,35,0,0" Height="163" VerticalAlignment="Top" HorizontalAlignment="Left" Width="120">
                     <Image x:Name="Green" Height="100" Width="100" OpacityMask="Black" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
                     <Label Content="Green&#xD;&#xA;" HorizontalAlignment="Center" Background="#00000000" Foreground="White" Height="30"/>
-                    <Button Content="Select" Margin="0,7,0,0"/>
+                    <Button Content="Select" Margin="0,7,0,0" Click="SetGreenChannel"/>
                 </StackPanel>
                 <StackPanel x:Name="B" Margin="0,0,0,28" Height="165" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120">
                     <Image x:Name="Blue" Height="100" Width="100" OpacityMask="Black" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
                     <Label Content="Blue" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
-                    <Button Content="Select" Margin="0,7,0,0"/>
+                    <Button Content="Select" Margin="0,7,0,0" Click="SetBlueChannel"/>
                 </StackPanel>
                 <StackPanel x:Name="A" Margin="212,0,0,28" Height="165" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120">
                     <Image x:Name="Alpha" Height="100" Width="100" OpacityMask="Black" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
                     <Label Content="Alpha" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
-                    <Button Content="Select" Margin="0,7,0,0"/>
+                    <Button Content="Select" Margin="0,7,0,0" Click="SetAlphaChannel"/>
                 </StackPanel>
-                <StackPanel x:Name="Out" Margin="0,0,0,10" HorizontalAlignment="Right" Width="331">
+                <StackPanel x:Name="Out" Margin="0,0,0,4" HorizontalAlignment="Right" Width="331">
                     <Image x:Name="Result" Height="309" Width="309" OpacityMask="Black" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
                     <Label Content="Output" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
-                    <Button Content="Save" Height="57" Margin="0,11,0,0"/>
+                    <Button x:Name="Render" Content="Render" Height="41" Click="Render_Click"/>
+                    <Button x:Name="Save" Content="Save" Height="41" Click="Save_Click"/>
+                </StackPanel>
+            </Grid>
+        </TabItem>
+        <TabItem x:Name="Preview" Header="Preview" Height="22" Margin="-2,0,-2,0" VerticalAlignment="Center">
+            <Grid Background="#FF424242">
+                <StackPanel x:Name="MainCol" Margin="0,35,0,0" HorizontalAlignment="Left" Width="120" Height="163" VerticalAlignment="Top">
+                    <Image x:Name="Color" Height="100" Width="100" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
+                    <Label Content="Main Color" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
+                    <Button Content="Select" Margin="0,7,0,0" Click="SetRedChannel"/>
+                </StackPanel>
+                <StackPanel x:Name="NormalM" Margin="169,35,0,0" HorizontalAlignment="Left" Width="120" Height="163" VerticalAlignment="Top">
+                    <Image x:Name="NormalMap" Height="100" Width="100" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
+                    <Label Content="Normal Map" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
+                    <Button Content="Select" Margin="0,7,0,0" Click="SetRedChannel"/>
+                </StackPanel>
+                <StackPanel x:Name="B1" Margin="0,0,0,28" Height="165" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="120">
+                    <Image x:Name="Blue1" Height="100" Width="100" OpacityMask="Black" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
+                    <Label Content="New Texture" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
+                </StackPanel>
+                <StackPanel x:Name="Out1" Margin="0,0,0,4" HorizontalAlignment="Right" Width="431">
+                    <Image x:Name="Result1" Height="394" Width="372" OpacityMask="Black" Source="/eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg"/>
+                    <Label Content="Output" HorizontalAlignment="Center" VerticalAlignment="Center" Background="#00000000" Foreground="White"/>
+                    <Button x:Name="SetModel" Content="Set Model" Height="41" Click="Render_Click"/>
                 </StackPanel>
             </Grid>
         </TabItem>
