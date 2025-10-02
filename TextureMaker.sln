@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TextureMaker", "TextureMaker.csproj", "{49B99B33-265B-4AA2-A287-5046C16B215A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTKProject", "..\OpenTKProject\OpenTKProject.csproj", "{FC4AEA74-283C-437F-A1CF-6039641CDFA0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenTKProject", "OpenTKProject\OpenTKProject.csproj", "{FC4AEA74-283C-437F-A1CF-6039641CDFA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
