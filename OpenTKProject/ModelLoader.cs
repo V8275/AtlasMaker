@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace OpenTKProject
+﻿namespace OpenTKProject
 {
     public class OBJModel
     {
@@ -17,7 +11,7 @@ namespace OpenTKProject
         private List<float> vertices = new List<float>();
         private List<float> normals = new List<float>();
         private List<float> texCoords = new List<float>();
-        private List<float> indices = new List<float>();
+        private List<uint> indices = new List<uint>();
         public void LoadModel(string path)
         {
             using (StreamReader reader = new StreamReader(path))
@@ -55,7 +49,7 @@ namespace OpenTKProject
                         for (int i = 1; i < parts.Length; i++)
                         {
                             string[] subParts = parts[i].Split('/');
-                            indices.Add(int.Parse(subParts[0]) - 1);
+                            indices.Add(uint.Parse(subParts[0]) - 1);
                         }
                     }
                 }
@@ -74,7 +68,7 @@ namespace OpenTKProject
         {
             return texCoords;
         }
-        public List<float> GetIndices()
+        public List<uint> GetIndices()
         {
             return indices;
         }

@@ -1,4 +1,5 @@
 ﻿using OpenTK.Graphics.ES30;
+using OpenTK.Mathematics;
 
 namespace OpenTKProject
 {
@@ -72,6 +73,12 @@ namespace OpenTKProject
             GL.DetachShader(Handle, FragmentShader);
             GL.DeleteShader(FragmentShader);
             GL.DeleteShader(VertexShader);
+        }
+
+        public void SetMatrix4(string name, Matrix4 matrix)
+        {
+            int location = GL.GetUniformLocation(Handle, name);
+            GL.UniformMatrix4(location, false, ref matrix);
         }
 
         public void Use()
