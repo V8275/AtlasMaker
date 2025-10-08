@@ -23,6 +23,7 @@ namespace OpenTKProject
      1.0f,  0.2f, 0.4f,  //Top vertex
      0.5f,  0.7f, 0.8f  //Top vertex
 };
+        OBJModel objModel;
 
         int VertexBufferObject;
         Shader shader;
@@ -31,13 +32,15 @@ namespace OpenTKProject
         {
             base.OnLoad();
 
-            shader = new Shader("D:\\Projects\\VSProjects\\OpenTKProject\\shader.vert", "D:\\Projects\\VSProjects\\OpenTKProject\\shader.frag");
+            objModel = new OBJModel("D:\\Development\\AtlasMaker\\OpenTKProject\\Models\\untitled.obj");
+
+            shader = new Shader("D:\\Development\\AtlasMaker\\OpenTKProject\\shader.vert", "D:\\Development\\AtlasMaker\\OpenTKProject\\shader.frag");
 
             GL.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
             VertexBufferObject = GL.GenBuffer();
             GL.BindBuffer(BufferTarget.ArrayBuffer, VertexBufferObject);
-            GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length * sizeof(float), vertices, BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ArrayBuffer, objModel.GetVertices().Count * sizeof(float), objModel.GetVertices().ToArray(), BufferUsageHint.StaticDraw);
 
             int VertexArrayObject = GL.GenVertexArray();
             GL.BindVertexArray(VertexArrayObject);

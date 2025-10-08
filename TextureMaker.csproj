@@ -14,6 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="OpenTK" Version="4.9.4" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg" />
   </ItemGroup>
 

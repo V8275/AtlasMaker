@@ -18,3 +18,17 @@ D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureMaker.pdb
 D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureMaker.genruntimeconfig.cache
 D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\ref\TextureMaker.dll
 D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureMaker.sourcelink.json
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\MainWindow.baml
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\MainWindow.g.cs
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\App.g.cs
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker_MarkupCompile.cache
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.g.resources
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.GeneratedMSBuildEditorConfig.editorconfig
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.AssemblyInfoInputs.cache
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.AssemblyInfo.cs
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.csproj.CoreCompileInputs.cache
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.sourcelink.json
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.dll
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\refint\TextureMaker.dll
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.pdb
+D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.csproj.AssemblyReference.cache

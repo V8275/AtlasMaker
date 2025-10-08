@@ -1,5 +1,4 @@
-﻿
-using OpenTK.Graphics.ES30;
+﻿using OpenTK.Graphics.ES30;
 
 namespace OpenTKProject
 {

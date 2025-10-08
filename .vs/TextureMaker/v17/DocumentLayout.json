@@ -1,15 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\VSProjects\\TextureMaker\\",
+  "WorkspaceRootPath": "D:\\Development\\AtlasMaker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|..\\OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\opentkproject\\openwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\modelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\modelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|..\\OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\opentkproject\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\openwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\openwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|..\\OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,44 +22,46 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Shader.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\OpenTKProject\\Shader.cs",
-              "RelativeDocumentMoniker": "..\\OpenTKProject\\Shader.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\OpenTKProject\\Shader.cs",
-              "RelativeToolTip": "..\\OpenTKProject\\Shader.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ModelLoader.cs",
+              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\ModelLoader.cs",
+              "RelativeDocumentMoniker": "OpenTKProject\\ModelLoader.cs",
+              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\ModelLoader.cs",
+              "RelativeToolTip": "OpenTKProject\\ModelLoader.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAswDAAAAB3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T10:22:50.483Z"
+              "WhenOpened": "2025-10-08T12:33:34.365Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "OpenWindow.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\OpenTKProject\\OpenWindow.cs",
-              "RelativeDocumentMoniker": "..\\OpenTKProject\\OpenWindow.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\OpenTKProject\\OpenWindow.cs",
-              "RelativeToolTip": "..\\OpenTKProject\\OpenWindow.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwDUAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\OpenWindow.cs",
+              "RelativeDocumentMoniker": "OpenTKProject\\OpenWindow.cs",
+              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\OpenWindow.cs",
+              "RelativeToolTip": "OpenTKProject\\OpenWindow.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwCYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T09:55:52.104Z",
+              "WhenOpened": "2025-10-08T12:23:33.477Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\OpenTKProject\\Program.cs",
-              "RelativeDocumentMoniker": "..\\OpenTKProject\\Program.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\OpenTKProject\\Program.cs",
-              "RelativeToolTip": "..\\OpenTKProject\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\Program.cs",
+              "RelativeDocumentMoniker": "OpenTKProject\\Program.cs",
+              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\Program.cs",
+              "RelativeToolTip": "OpenTKProject\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-28T09:34:48.38Z"
+              "WhenOpened": "2025-10-08T12:23:29.068Z",
+              "EditorCaption": ""
             }
           ]
         }
