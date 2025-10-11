@@ -90,3 +90,5 @@ D:\Projects\VSProjects\TextureMaker\OpenTKProject\obj\Debug\net9.0\refint\OpenTK
 D:\Projects\VSProjects\TextureMaker\OpenTKProject\obj\Debug\net9.0\OpenTKProject.pdb
 D:\Projects\VSProjects\TextureMaker\OpenTKProject\obj\Debug\net9.0\OpenTKProject.genruntimeconfig.cache
 D:\Projects\VSProjects\TextureMaker\OpenTKProject\obj\Debug\net9.0\ref\OpenTKProject.dll
+D:\Projects\VSProjects\TextureMaker\OpenTKProject\bin\Debug\net9.0\StbImageSharp.dll
+D:\Projects\VSProjects\TextureMaker\OpenTKProject\bin\Debug\net9.0\JeremyAnsel.Media.WavefrontObj.dll

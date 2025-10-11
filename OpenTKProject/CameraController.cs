@@ -5,54 +5,112 @@ namespace OpenTKProject
 {
     public class CameraController
     {
-        float speed = 1.5f;
+        private float _speed = 1.5f;
 
-        Vector3 front = new Vector3(0.0f, 0.0f, -1.0f);
-        Vector3 up = new Vector3(0.0f, 1.0f, 0.0f);
+        public Vector3 Position { get; private set; }
+        public Vector3 Front { get; private set; }
+        public Vector3 Up { get; private set; }
+        public Vector3 Right { get; private set; }
+        public float Yaw { get; private set; }
+        public float Pitch { get; private set; }
+        public float MouseSensitivity { get; set; } = 0.1f;
 
-        public CameraController() { }
-
-        public CameraController(float s)
+        public CameraController()
         {
-            speed = s;
+            InitializeVectors();
         }
 
-        public void SetSpeed(float s)
+        public CameraController(float speed, Vector3 position)
         {
-            speed = s;
+            _speed = speed;
+            Position = position;
+            InitializeVectors();
         }
 
-        public void Move(KeyboardState input, float time, ref Vector3 position)
+        private void InitializeVectors()
         {
+            Front = -Vector3.UnitZ;
+            Up = Vector3.UnitY;
+            Right = Vector3.UnitX;
+            Yaw = -90.0f;
+            Pitch = 0.0f;
+            UpdateVectors();
+        }
+
+        public Matrix4 GetViewMatrix()
+        {
+            return Matrix4.LookAt(Position, Position + Front, Up);
+        }
+
+        public void SetSpeed(float speed)
+        {
+            _speed = speed;
+        }
+
+        public void Move(KeyboardState input, float deltaTime)
+        {
+            float velocity = _speed * deltaTime;
+
             if (input.IsKeyDown(Keys.W))
             {
-                position += front * speed * time; //Forward 
+                Position += Front * velocity; // Forward
             }
 
             if (input.IsKeyDown(Keys.S))
             {
-                position -= front * speed * time; //Backwards
+                Position -= Front * velocity; // Backwards
             }
 
             if (input.IsKeyDown(Keys.A))
             {
-                position -= Vector3.Normalize(Vector3.Cross(front, up)) * speed * time; //Left
+                Position -= Right * velocity; // Left
             }
 
             if (input.IsKeyDown(Keys.D))
             {
-                position += Vector3.Normalize(Vector3.Cross(front, up)) * speed * time; //Right
+                Position += Right * velocity; // Right
             }
 
             if (input.IsKeyDown(Keys.Space))
             {
-                position += up * speed * time; //Up 
+                Position += Up * velocity; // Up
             }
 
             if (input.IsKeyDown(Keys.LeftShift))
             {
-                position -= up * speed * time; //Down
+                Position -= Up * velocity; // Down
             }
+        }
+
+        public void RotateCamera(float xOffset, float yOffset)
+        {
+            xOffset *= MouseSensitivity;
+            yOffset *= MouseSensitivity;
+
+            Yaw += xOffset;
+            Pitch += yOffset;
+
+            if (Pitch > 89.0f)
+                Pitch = 89.0f;
+            if (Pitch < -89.0f)
+                Pitch = -89.0f;
+
+            UpdateVectors();
+        }
+
+        private void UpdateVectors()
+        {
+            Vector3 newFront;
+            newFront.X = MathF.Cos(MathHelper.DegreesToRadians(Yaw)) *
+                         MathF.Cos(MathHelper.DegreesToRadians(Pitch));
+            newFront.Y = MathF.Sin(MathHelper.DegreesToRadians(Pitch));
+            newFront.Z = MathF.Sin(MathHelper.DegreesToRadians(Yaw)) *
+                         MathF.Cos(MathHelper.DegreesToRadians(Pitch));
+
+            Front = Vector3.Normalize(newFront);
+
+            Right = Vector3.Normalize(Vector3.Cross(Front, Vector3.UnitY));
+            Up = Vector3.Normalize(Vector3.Cross(Right, Front));
         }
     }
 }

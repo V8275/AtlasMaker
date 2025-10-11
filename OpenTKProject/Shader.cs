@@ -67,6 +67,22 @@ namespace OpenTKProject
             }
         }
 
+        public int GetAttribLocation(string attribName)
+        {
+            return GL.GetAttribLocation(Handle, attribName);
+        }
+
+        public int GetUniformLocation(string uniformName)
+        {
+            return GL.GetUniformLocation(Handle, uniformName);
+        }
+
+        public void SetInt(string name, int value)
+        {
+            int location = GL.GetUniformLocation(Handle, name);
+            GL.Uniform1(location, value);
+        }
+
         public void ClearMemory()
         {
             GL.DetachShader(Handle, VertexShader);

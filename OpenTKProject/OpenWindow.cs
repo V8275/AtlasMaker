@@ -8,18 +8,17 @@ namespace OpenTKProject
 {
     public class OpenWindow : GameWindow
     {
-        OBJModel objModel;
+        Model SceneModel;
 
         int VertexBufferObject;
         int VertexArrayObject;
         int ElementBufferObject;
-        Shader shader;
 
         CameraController cameraController;
-        Vector3 position = new Vector3(0.0f, 0.0f, 3.0f);
-        Vector3 front = new Vector3(0.0f, 0.0f, -1.0f);
-        Vector3 up = new Vector3(0.0f, 1.0f, 0.0f);
-        Vector2 _lastMousePos;
+
+        private float _lastX;
+        private float _lastY;
+        private bool _firstMove = true;
 
         public OpenWindow(int width, int height, string title) :
             base(GameWindowSettings.Default, new NativeWindowSettings() { Size = (width, height), Title = title })
@@ -29,30 +28,57 @@ namespace OpenTKProject
         {
             base.OnLoad();
             SetLight();
+            CursorState = CursorState.Confined;
 
-            cameraController = new CameraController();
-
-            objModel = new OBJModel("D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Models\\untitled.obj");
-
-            shader = new Shader("D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.vert", "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.frag");
-
+            GL.Enable(EnableCap.CullFace);
+            GL.CullFace(CullFaceMode.Back);
+            GL.FrontFace(FrontFaceDirection.Ccw);
+            GL.Enable(EnableCap.DepthTest);
+            GL.DepthFunc(DepthFunction.Less);
             GL.ClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 
-            VertexArrayObject = GL.GenVertexArray();
-            GL.BindVertexArray(VertexArrayObject);
+            cameraController = new CameraController(1.5f, new Vector3(0.0f, 0.0f, 3.0f));
+
+            SceneModel = new Model();
+            SceneModel.SetModel(@"Models/QuadColored.obj");
+            SceneModel.SetTexture(@"Models/Textures/Quad.jpg");
+            SceneModel.SetShader("D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.vert", "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.frag");
 
             VertexBufferObject = GL.GenBuffer();
+            VertexArrayObject = GL.GenVertexArray();
+            ElementBufferObject = GL.GenBuffer();
+
+            GL.BindVertexArray(VertexArrayObject);
             GL.BindBuffer(BufferTarget.ArrayBuffer, VertexBufferObject);
-            GL.BufferData(BufferTarget.ArrayBuffer, objModel.GetVertices().Count * sizeof(float), objModel.GetVertices().ToArray(), BufferUsageHint.StaticDraw);
+            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ElementBufferObject);
+
+            SetupModelOnSceneNew(SceneModel);
+        }
+
+        private void SetupModelOnSceneNew(Model model)
+        {
+            int StrideL = 5;
+            int UVOffsStart = 3;
+            //int NormalOffset = 5;
+
+            int stridSize = StrideL * sizeof(float);
+            int uvByteOffset = UVOffsStart * sizeof(float);
+            //int normalbyteOffs = NormalOffset * sizeof(float);
+
+            GL.BufferData(BufferTarget.ArrayBuffer, model.ObjModel.GetResultMassive().Count() * sizeof(float), model.ObjModel.GetResultMassive().ToArray(), BufferUsageHint.StaticDraw);
+
+            GL.BufferData(BufferTarget.ElementArrayBuffer, model.ObjModel.GetIndices().Count() * sizeof(uint), model.ObjModel.GetIndices().ToArray(), BufferUsageHint.StaticDraw);
 
             GL.EnableVertexAttribArray(0);
-            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 3 * sizeof(float), 0);
+            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, stridSize, 0);
 
-            ElementBufferObject = GL.GenBuffer();
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ElementBufferObject);
-            GL.BufferData(BufferTarget.ElementArrayBuffer, objModel.GetIndices().Count * sizeof(uint), objModel.GetIndices().ToArray(), BufferUsageHint.StaticDraw);
+            GL.EnableVertexAttribArray(1);
+            GL.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, stridSize, uvByteOffset);
 
-            shader.Use();
+            model.Shader.Use();
+            GL.ActiveTexture(TextureUnit.Texture0);
+            GL.BindTexture(TextureTarget.Texture2D, model.Texture.Handle);
+            model.Shader.SetInt("texture0", 0);
         }
 
         protected override void OnRenderFrame(FrameEventArgs e)
@@ -60,33 +86,34 @@ namespace OpenTKProject
             base.OnRenderFrame(e);
 
             KeyboardState input = KeyboardState;
+            cameraController.Move(input, (float)e.Time);
 
-            cameraController.Move(input, (float)e.Time, ref position);
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            GL.Clear(ClearBufferMask.ColorBufferBit);
+            RenderModel(SceneModel);
 
-            // Создаем матрицы
-            Matrix4 view = Matrix4.LookAt(position, position + front, up);
+            SwapBuffers();
+        }
+
+        private void RenderModel(Model mesh)
+        {
+            Matrix4 view = cameraController.GetViewMatrix();
             Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), (float)Size.X / (float)Size.Y, 0.1f, 100.0f);
             Matrix4 model = Matrix4.Identity;
 
-            // Передаем матрицы в шейдер
-            shader.Use();
-            shader.SetMatrix4("model", model);
-            shader.SetMatrix4("view", view);
-            shader.SetMatrix4("projection", projection);
+            mesh.Shader.Use();
 
-            // Рисуем модель
+            mesh.Shader.SetMatrix4("model", model);
+            mesh.Shader.SetMatrix4("view", view);
+            mesh.Shader.SetMatrix4("projection", projection);
+
             GL.BindVertexArray(VertexArrayObject);
-            GL.DrawElements(PrimitiveType.Triangles, objModel.GetIndices().Count, DrawElementsType.UnsignedInt, 0);
-
-            SwapBuffers();
+            GL.DrawElements(PrimitiveType.Triangles, mesh.ObjModel.GetIndices().Count, DrawElementsType.UnsignedInt, 0);
         }
 
         protected override void OnFramebufferResize(FramebufferResizeEventArgs e)
         {
             base.OnFramebufferResize(e);
-
             GL.Viewport(0, 0, e.Width, e.Height);
         }
 
@@ -100,22 +127,45 @@ namespace OpenTKProject
             }
         }
 
+        protected override void OnMouseMove(MouseMoveEventArgs e)
+        {
+            base.OnMouseMove(e);
+
+            if (_firstMove)
+            {
+                _lastX = e.X;
+                _lastY = e.Y;
+                _firstMove = false;
+            }
+
+            float xOffset = e.X - _lastX;
+            float yOffset = _lastY - e.Y;
+
+            _lastX = e.X;
+            _lastY = e.Y;
+
+            cameraController.RotateCamera(xOffset, yOffset);
+        }
+
         protected override void OnUnload()
         {
             GL.DeleteBuffer(VertexBufferObject);
             GL.DeleteVertexArray(VertexArrayObject);
-            shader.Dispose();
+            GL.DeleteBuffer(ElementBufferObject);
+
+            DisposeShaders(SceneModel);
 
             base.OnUnload();
         }
 
+        private void DisposeShaders(Model model)
+        {
+            model.Shader.Dispose();
+        }
+
         private void SetLight()
         {
-            //Color4 lightColor = new Color4(1.0f, 1.0f, 1.0f, 1.0f);
-            //Color4 toyColor = new Color4(1.0f, 0.5f, 0.31f, 1.0f);
-            //Color4 result = lightColor * toyColor; // = (1.0f, 0.5f, 0.31f, 1.0f);
-
-
+            // Настройки освещения
         }
     }
 }

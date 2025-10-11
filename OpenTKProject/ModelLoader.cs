@@ -12,6 +12,8 @@
         private List<float> normals = new List<float>();
         private List<float> texCoords = new List<float>();
         private List<uint> indices = new List<uint>();
+        private List<float> resultArray = new List<float>();
+
         public void LoadModel(string path)
         {
             using (StreamReader reader = new StreamReader(path))
@@ -53,12 +55,41 @@
                         }
                     }
                 }
+
+                resultArray = MergeThreeLists(vertices, texCoords);
             }
+        }
+
+        public static List<float> MergeThreeLists(List<float> list1, List<float> list2)
+        {
+            List<float> result = new List<float>();
+            int index1 = 0, index2 = 0;
+
+            while (index1 < list1.Count || index2 < list2.Count)
+            {
+                for (int i = 0; i < 3 && index1 < list1.Count; i++)
+                {
+                    result.Add(list1[index1]);
+                    index1++;
+                }
+
+                for (int i = 0; i < 2 && index2 < list2.Count; i++)
+                {
+                    result.Add(list2[index2]);
+                    index2++;
+                }
+            }
+
+            return result;
         }
 
         public List<float> GetVertices()
         {
             return vertices;
+        }
+        public List<float> GetResultMassive()
+        {
+            return resultArray;
         }
         public List<float> GetNormals()
         {

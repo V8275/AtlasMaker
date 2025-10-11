@@ -2,6 +2,15 @@
   "version": 3,
   "targets": {
     "net9.0-windows7.0": {
+      "JeremyAnsel.Media.WavefrontObj/3.0.58": {
+        "type": "package",
+        "compile": {
+          "lib/net9.0/JeremyAnsel.Media.WavefrontObj.dll": {}
+        },
+        "runtime": {
+          "lib/net9.0/JeremyAnsel.Media.WavefrontObj.dll": {}
+        }
+      },
       "OpenTK/4.9.4": {
         "type": "package",
         "dependencies": {
@@ -189,6 +198,15 @@
           }
         }
       },
+      "StbImageSharp/2.30.15": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/StbImageSharp.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
         "type": "package",
         "compile": {
@@ -208,6 +226,24 @@
     }
   },
   "libraries": {
+    "JeremyAnsel.Media.WavefrontObj/3.0.58": {
+      "sha512": "FJix/J1ITKIYTVlUxHd9Umhknr5UAkS0uygZXDhct+ykkoxbDMQgeG7CSOvPn+q7/rdRl3DgdLYpwJ328q/Vpg==",
+      "type": "package",
+      "path": "jeremyansel.media.wavefrontobj/3.0.58",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "jeremyansel.media.wavefrontobj.3.0.58.nupkg.sha512",
+        "jeremyansel.media.wavefrontobj.nuspec",
+        "lib/net48/JeremyAnsel.Media.WavefrontObj.dll",
+        "lib/net6.0/JeremyAnsel.Media.WavefrontObj.dll",
+        "lib/net8.0/JeremyAnsel.Media.WavefrontObj.dll",
+        "lib/net9.0/JeremyAnsel.Media.WavefrontObj.dll",
+        "lib/netstandard2.0/JeremyAnsel.Media.WavefrontObj.dll"
+      ]
+    },
     "OpenTK/4.9.4": {
       "sha512": "fp9ZI6akO4ZuIGzuUE0QRU5zRJhXbSXa5racehFoTdvodhRDecXCOcH68mRsZaMwnxLO9ECnf2LGM9BmiJKvhw==",
       "type": "package",
@@ -391,6 +427,19 @@
         "opentk.windowing.graphicslibraryframework.nuspec"
       ]
     },
+    "StbImageSharp/2.30.15": {
+      "sha512": "7QqbupVhz2kcFUPTgMw4iHR9rYDHGundzzee19Mwmd1typ2Lnv8EVJcLJxlkeBM2+4ex0NwsMtdbGSJctp1XCQ==",
+      "type": "package",
+      "path": "stbimagesharp/2.30.15",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net471/StbImageSharp.dll",
+        "lib/netstandard2.0/StbImageSharp.dll",
+        "stbimagesharp.2.30.15.nupkg.sha512",
+        "stbimagesharp.nuspec"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "sha512": "/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "type": "package",
@@ -419,7 +468,9 @@
   },
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
-      "OpenTK >= 4.9.4"
+      "JeremyAnsel.Media.WavefrontObj >= 3.0.58",
+      "OpenTK >= 4.9.4",
+      "StbImageSharp >= 2.30.15"
     ]
   },
   "packageFolders": {
@@ -472,9 +523,17 @@
       "net9.0-windows7.0": {
         "targetAlias": "net9.0-windows",
         "dependencies": {
+          "JeremyAnsel.Media.WavefrontObj": {
+            "target": "Package",
+            "version": "[3.0.58, )"
+          },
           "OpenTK": {
             "target": "Package",
             "version": "[4.9.4, )"
+          },
+          "StbImageSharp": {
+            "target": "Package",
+            "version": "[2.30.15, )"
           }
         },
         "imports": [
