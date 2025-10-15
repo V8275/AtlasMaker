@@ -1,15 +1,20 @@
-﻿using JeremyAnsel.Media.WavefrontObj;
+﻿using System.IO;
+using JeremyAnsel.Media.WavefrontObj;
 
 namespace OpenTKProject
 {
     public class VisualModel
     {
+        private string path;
+        public string PathToModel { get { return path; } }
+
         private ObjFile model;
         private List<float> vertices = new List<float>();
         private List<uint> indices = new List<uint>();
 
         public VisualModel(string modelPath)
         {
+            path = modelPath;
             model = ObjFile.FromFile(modelPath);
 
             vertices = GetVertices();
@@ -29,7 +34,7 @@ namespace OpenTKProject
                     vertices.Add(position.Y);
                     vertices.Add(position.Z);
 
-                    if (vertex.Texture > 0)
+                    if (vertex.Texture > 0 && model.TextureVertices.Count > 0)
                     {
                         var texCoord = model.TextureVertices[vertex.Texture - 1];
                         vertices.Add(texCoord.X);
@@ -38,6 +43,20 @@ namespace OpenTKProject
                     else
                     {
                         vertices.Add(0f);
+                        vertices.Add(0f);
+                    }
+
+                    if (vertex.Normal > 0 && model.VertexNormals.Count > 0)
+                    {
+                        var normal = model.VertexNormals[vertex.Normal - 1];
+                        vertices.Add(normal.X);
+                        vertices.Add(normal.Y);
+                        vertices.Add(normal.Z);
+                    }
+                    else
+                    {
+                        vertices.Add(0f);
+                        vertices.Add(1f);
                         vertices.Add(0f);
                     }
                 }

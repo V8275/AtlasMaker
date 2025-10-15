@@ -8,11 +8,8 @@ namespace OpenTKProject
 {
     public class OpenWindow : GameWindow
     {
-        Model SceneModel;
-
-        int VertexBufferObject;
-        int VertexArrayObject;
-        int ElementBufferObject;
+        private string defaultVertShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
+        private string defaultFragShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
 
         CameraController cameraController;
 
@@ -23,6 +20,10 @@ namespace OpenTKProject
         public OpenWindow(int width, int height, string title) :
             base(GameWindowSettings.Default, new NativeWindowSettings() { Size = (width, height), Title = title })
         { }
+
+        List<SceneObject> sceneObjects = new List<SceneObject>();
+
+        Dictionary<Model, (int vao, int vbo, int ebo)> modelBuffers = new Dictionary<Model, (int, int, int)>();
 
         protected override void OnLoad()
         {
@@ -39,39 +40,83 @@ namespace OpenTKProject
 
             cameraController = new CameraController(1.5f, new Vector3(0.0f, 0.0f, 3.0f));
 
-            SceneModel = new Model();
-            SceneModel.SetVModel(@"Models/untitled.obj");
-            SceneModel.SetTexture(@"Models/Textures/TexTest.jpg");
-            SceneModel.SetShader("D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.vert", "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.frag");
+            List<Model> models = new List<Model>();
 
-            VertexBufferObject = GL.GenBuffer();
-            VertexArrayObject = GL.GenVertexArray();
-            ElementBufferObject = GL.GenBuffer();
+            models.Add(new Model(SetupModel(@"Models/Cube.obj", @"Models/Textures/Untitled.jpg")));
 
-            GL.BindVertexArray(VertexArrayObject);
-            GL.BindBuffer(BufferTarget.ArrayBuffer, VertexBufferObject);
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ElementBufferObject);
+            Model lightmodel = new Model(SetupModel(@"Models/Cube.obj", @"Models/Textures/Untitled.jpg",
+                "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\LightShader.vert",
+                "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\LightShader.frag"));
 
-            SetupModelOnSceneNew(SceneModel);
+            lightmodel.Shader.SetVector3("objectColor", new Vector3(0.0f, 0.5f, 0.31f));
+            lightmodel.Shader.SetVector3("lightColor", new Vector3(1.0f, 1.0f, 1.0f));
+
+            models.Add(lightmodel);
+
+            sceneObjects.Add(new SceneObject(models[0], new Vector3(0.0f, 0.0f, 0.0f)));
+            sceneObjects.Add(new SceneObject(models[1], new Vector3(2.0f, 0.0f, 0.0f), new Vector3(0.5f, 0.5f, 0.5f)));
+
+            foreach (var obj in sceneObjects)
+            {
+                if (!modelBuffers.ContainsKey(obj.Model))
+                {
+                    SetupModelBuffers(obj.Model);
+                }
+            }
         }
 
-        private void SetupModelOnSceneNew(Model model)
+        private Model SetupModel(string modelPath, string texturePath = "", string vertShader = "", string fragShader = "")
         {
-            int StrideL = 5;
+            Model model = new Model();
+            model.SetVModel(modelPath);
+            if(!String.IsNullOrEmpty(texturePath)) model.SetTexture(texturePath);
+
+            if (String.IsNullOrEmpty(vertShader) || String.IsNullOrEmpty(fragShader))
+                model.SetShader(defaultVertShader, defaultFragShader);
+            else
+                model.SetShader(vertShader, fragShader);
+
+            return model;
+        }
+
+        private void SetupModelBuffers(Model model)
+        {
+            int vao = GL.GenVertexArray();
+            int vbo = GL.GenBuffer();
+            int ebo = GL.GenBuffer();
+
+            GL.BindVertexArray(vao);
+            GL.BindBuffer(BufferTarget.ArrayBuffer, vbo);
+            GL.BindBuffer(BufferTarget.ElementArrayBuffer, ebo);
+
+            SetupModelOnSceneNew(model, vbo, ebo);
+            modelBuffers[model] = (vao, vbo, ebo);
+        }
+
+        private void SetupModelOnSceneNew(Model model, int vbo, int ebo)
+        {
+            int StrideL = 8;
             int UVOffsStart = 3;
+            int NormalOffset = 5;
 
             int stridSize = StrideL * sizeof(float);
             int uvByteOffset = UVOffsStart * sizeof(float);
+            int normalByteOffs = NormalOffset * sizeof(float);
 
-            GL.BufferData(BufferTarget.ArrayBuffer, model.VModel.Verticies.Count() * sizeof(float), model.VModel.Verticies.ToArray(), BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ArrayBuffer, model.VModel.Verticies.Count() * sizeof(float),
+                          model.VModel.Verticies.ToArray(), BufferUsageHint.StaticDraw);
 
-            GL.BufferData(BufferTarget.ElementArrayBuffer, model.VModel.Indices.Count() * sizeof(uint), model.VModel.Indices.ToArray(), BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ElementArrayBuffer, model.VModel.Indices.Count() * sizeof(uint),
+                          model.VModel.Indices.ToArray(), BufferUsageHint.StaticDraw);
 
             GL.EnableVertexAttribArray(0);
             GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, stridSize, 0);
 
             GL.EnableVertexAttribArray(1);
             GL.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, stridSize, uvByteOffset);
+
+            GL.EnableVertexAttribArray(2);
+            GL.VertexAttribPointer(2, 3, VertexAttribPointerType.Float, false, stridSize, normalByteOffs);
 
             model.Shader.Use();
             GL.ActiveTexture(TextureUnit.Texture0);
@@ -88,25 +133,32 @@ namespace OpenTKProject
 
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
-            RenderModel(SceneModel);
+            foreach (var obj in sceneObjects)
+            {
+                RenderModel(obj);
+            }
 
             SwapBuffers();
         }
 
-        private void RenderModel(Model mesh)
+        private void RenderModel(SceneObject sceneObj)
         {
             Matrix4 view = cameraController.GetViewMatrix();
-            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), (float)Size.X / (float)Size.Y, 0.1f, 100.0f);
-            Matrix4 model = Matrix4.Identity;
+            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(
+                MathHelper.DegreesToRadians(45.0f),
+                (float)Size.X / (float)Size.Y, 0.1f, 100.0f);
 
-            mesh.Shader.Use();
+            Matrix4 modelMatrix = sceneObj.GetModelMatrix();
 
-            mesh.Shader.SetMatrix4("model", model);
-            mesh.Shader.SetMatrix4("view", view);
-            mesh.Shader.SetMatrix4("projection", projection);
+            sceneObj.Model.Shader.Use();
+            sceneObj.Model.Shader.SetMatrix4("model", modelMatrix);
+            sceneObj.Model.Shader.SetMatrix4("view", view);
+            sceneObj.Model.Shader.SetMatrix4("projection", projection);
 
-            GL.BindVertexArray(VertexArrayObject);
-            GL.DrawElements(PrimitiveType.Triangles, mesh.VModel.Indices.Count, DrawElementsType.UnsignedInt, 0);
+            var buffers = modelBuffers[sceneObj.Model];
+            GL.BindVertexArray(buffers.vao);
+            GL.DrawElements(PrimitiveType.Triangles, sceneObj.Model.VModel.Indices.Count,
+                           DrawElementsType.UnsignedInt, 0);
         }
 
         protected override void OnFramebufferResize(FramebufferResizeEventArgs e)
@@ -147,11 +199,17 @@ namespace OpenTKProject
 
         protected override void OnUnload()
         {
-            GL.DeleteBuffer(VertexBufferObject);
-            GL.DeleteVertexArray(VertexArrayObject);
-            GL.DeleteBuffer(ElementBufferObject);
+            foreach (var buffers in modelBuffers.Values)
+            {
+                GL.DeleteBuffer(buffers.vbo);
+                GL.DeleteVertexArray(buffers.vao);
+                GL.DeleteBuffer(buffers.ebo);
+            }
 
-            DisposeShaders(SceneModel);
+            foreach (var obj in sceneObjects)
+            {
+                DisposeShaders(obj.Model);
+            }
 
             base.OnUnload();
         }

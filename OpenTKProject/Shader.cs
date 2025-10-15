@@ -1,10 +1,18 @@
-﻿using OpenTK.Graphics.ES30;
+﻿using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 
 namespace OpenTKProject
 {
     public class Shader : IDisposable
     {
+
+        private string vPath;
+        public string PathToVecShader { get { return vPath; } }
+
+
+        private string fPath;
+        public string PathToFragShader { get { return fPath; } }
+
         int Handle;
 
         int VertexShader;
@@ -14,6 +22,9 @@ namespace OpenTKProject
 
         public Shader(string vertexPath, string fragmentPath)
         {
+            vPath = vertexPath;
+            fPath = fragmentPath;
+
             string VertexShaderSource = File.ReadAllText(vertexPath);
 
             string FragmentShaderSource = File.ReadAllText(fragmentPath);
@@ -95,6 +106,12 @@ namespace OpenTKProject
         {
             int location = GL.GetUniformLocation(Handle, name);
             GL.UniformMatrix4(location, false, ref matrix);
+        }
+
+        public void SetVector3(string name, Vector3 v3)
+        {
+            int location = GL.GetUniformLocation(Handle, name);
+            GL.Uniform3(location, v3);
         }
 
         public void Use()

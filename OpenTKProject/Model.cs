@@ -1,4 +1,6 @@
-﻿namespace OpenTKProject
+﻿using System.IO;
+
+namespace OpenTKProject
 {
     public class Model
     {
@@ -17,6 +19,14 @@
             texture = tex;
             shader = shad;
         }
+
+        public Model(Model m)
+        {
+            SetVModel(m.vModel.PathToModel);
+            SetTexture(m.Texture.PathToTexture);
+            SetShader(m.shader.PathToVecShader, m.shader.PathToFragShader);
+        }
+
         public void SetVModel(string path)
         {
             vModel = new VisualModel(path);
