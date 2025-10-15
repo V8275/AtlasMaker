@@ -1,4 +1,4 @@
-﻿using OpenTK.Graphics.ES30;
+﻿using OpenTK.Graphics.OpenGL;
 using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
@@ -28,7 +28,7 @@ namespace OpenTKProject
         {
             base.OnLoad();
             SetLight();
-            CursorState = CursorState.Confined;
+            CursorState = CursorState.Grabbed;
 
             GL.Enable(EnableCap.CullFace);
             GL.CullFace(CullFaceMode.Back);
@@ -40,8 +40,8 @@ namespace OpenTKProject
             cameraController = new CameraController(1.5f, new Vector3(0.0f, 0.0f, 3.0f));
 
             SceneModel = new Model();
-            SceneModel.SetModel(@"Models/QuadColored.obj");
-            SceneModel.SetTexture(@"Models/Textures/Quad.jpg");
+            SceneModel.SetVModel(@"Models/untitled.obj");
+            SceneModel.SetTexture(@"Models/Textures/TexTest.jpg");
             SceneModel.SetShader("D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.vert", "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\shader.frag");
 
             VertexBufferObject = GL.GenBuffer();
@@ -59,15 +59,13 @@ namespace OpenTKProject
         {
             int StrideL = 5;
             int UVOffsStart = 3;
-            //int NormalOffset = 5;
 
             int stridSize = StrideL * sizeof(float);
             int uvByteOffset = UVOffsStart * sizeof(float);
-            //int normalbyteOffs = NormalOffset * sizeof(float);
 
-            GL.BufferData(BufferTarget.ArrayBuffer, model.ObjModel.GetResultMassive().Count() * sizeof(float), model.ObjModel.GetResultMassive().ToArray(), BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ArrayBuffer, model.VModel.Verticies.Count() * sizeof(float), model.VModel.Verticies.ToArray(), BufferUsageHint.StaticDraw);
 
-            GL.BufferData(BufferTarget.ElementArrayBuffer, model.ObjModel.GetIndices().Count() * sizeof(uint), model.ObjModel.GetIndices().ToArray(), BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ElementArrayBuffer, model.VModel.Indices.Count() * sizeof(uint), model.VModel.Indices.ToArray(), BufferUsageHint.StaticDraw);
 
             GL.EnableVertexAttribArray(0);
             GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, stridSize, 0);
@@ -108,7 +106,7 @@ namespace OpenTKProject
             mesh.Shader.SetMatrix4("projection", projection);
 
             GL.BindVertexArray(VertexArrayObject);
-            GL.DrawElements(PrimitiveType.Triangles, mesh.ObjModel.GetIndices().Count, DrawElementsType.UnsignedInt, 0);
+            GL.DrawElements(PrimitiveType.Triangles, mesh.VModel.Indices.Count, DrawElementsType.UnsignedInt, 0);
         }
 
         protected override void OnFramebufferResize(FramebufferResizeEventArgs e)

@@ -1,27 +1,25 @@
-﻿using System;
-namespace OpenTKProject
+﻿namespace OpenTKProject
 {
     public class Model
     {
-        OBJModel objModel;
+        VisualModel vModel;
         Texture texture;
         Shader shader;
 
-        public OBJModel ObjModel { get { return objModel; } }
+        public VisualModel VModel { get { return vModel; } }
         public Texture Texture { get { return texture; } }
         public Shader Shader { get { return shader; } }
 
         public Model() { }
-        public Model(OBJModel mod, Texture tex, Shader shad)
+        public Model(VisualModel mod, Texture tex, Shader shad)
         {
-            objModel = mod;
+            vModel = mod;
             texture = tex;
             shader = shad;
         }
-
-        public void SetModel(string path)
+        public void SetVModel(string path)
         {
-            objModel = new OBJModel(path);
+            vModel = new VisualModel(path);
         }
         public void SetTexture(string path)
         {
