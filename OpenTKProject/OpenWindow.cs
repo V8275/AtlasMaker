@@ -8,8 +8,10 @@ namespace OpenTKProject
 {
     public class OpenWindow : GameWindow
     {
-        private string defaultVertShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
-        private string defaultFragShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
+        private readonly Vector3 globalLightPos = new Vector3(1.2f, 1.0f, 2.0f);
+
+        private string defaultVertShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
+        private string defaultFragShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
 
         CameraController cameraController;
 
@@ -28,7 +30,6 @@ namespace OpenTKProject
         protected override void OnLoad()
         {
             base.OnLoad();
-            SetLight();
             CursorState = CursorState.Grabbed;
 
             GL.Enable(EnableCap.CullFace);
@@ -42,11 +43,11 @@ namespace OpenTKProject
 
             List<Model> models = new List<Model>();
 
-            models.Add(new Model(SetupModel(@"Models/Cube.obj", @"Models/Textures/Untitled.jpg")));
+            models.Add(new Model(SetupModel(@"Models/untitled.obj", @"Models/Textures/TexTest.jpg")));
 
-            Model lightmodel = new Model(SetupModel(@"Models/Cube.obj", @"Models/Textures/Untitled.jpg",
-                "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\LightShader.vert",
-                "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\LightShader.frag"));
+            Model lightmodel = new Model(SetupModel(@"Models/Cube.obj", @"Models/Textures/TexTest.jpg",
+                "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\LightShader.vert",
+                "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\LightShader.frag"));
 
             lightmodel.Shader.SetVector3("objectColor", new Vector3(0.0f, 0.5f, 0.31f));
             lightmodel.Shader.SetVector3("lightColor", new Vector3(1.0f, 1.0f, 1.0f));
@@ -154,6 +155,17 @@ namespace OpenTKProject
             sceneObj.Model.Shader.SetMatrix4("model", modelMatrix);
             sceneObj.Model.Shader.SetMatrix4("view", view);
             sceneObj.Model.Shader.SetMatrix4("projection", projection);
+            sceneObj.Model.Shader.SetVector3("viewPos", cameraController.Position);
+
+            sceneObj.Model.Shader.SetVector3("material.ambient", new Vector3(1.0f, 0.5f, 0.31f));
+            sceneObj.Model.Shader.SetVector3("material.diffuse", new Vector3(1.0f, 0.5f, 0.31f));
+            sceneObj.Model.Shader.SetVector3("material.specular", new Vector3(0.5f, 0.5f, 0.5f));
+            sceneObj.Model.Shader.SetFloat("material.shininess", 32.0f);
+
+            sceneObj.Model.Shader.SetVector3("light.ambient", new Vector3(0.2f, 0.2f, 0.2f));
+            sceneObj.Model.Shader.SetVector3("light.diffuse", new Vector3(0.5f, 0.5f, 0.5f)); 
+            sceneObj.Model.Shader.SetVector3("light.specular", new Vector3(1.0f, 1.0f, 1.0f));
+            sceneObj.Model.Shader.SetVector3("light.position", globalLightPos);
 
             var buffers = modelBuffers[sceneObj.Model];
             GL.BindVertexArray(buffers.vao);
@@ -217,11 +229,6 @@ namespace OpenTKProject
         private void DisposeShaders(Model model)
         {
             model.Shader.Dispose();
-        }
-
-        private void SetLight()
-        {
-            // Настройки освещения
         }
     }
 }

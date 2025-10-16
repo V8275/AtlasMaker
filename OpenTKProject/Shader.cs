@@ -114,6 +114,12 @@ namespace OpenTKProject
             GL.Uniform3(location, v3);
         }
 
+        public void SetFloat(string name, float f)
+        {
+            int location = GL.GetUniformLocation(Handle, name);
+            GL.Uniform1(location, f);
+        }
+
         public void Use()
         {
             GL.UseProgram(Handle);
