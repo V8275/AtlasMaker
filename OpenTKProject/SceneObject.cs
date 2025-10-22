@@ -24,6 +24,14 @@ namespace OpenTKProject
             Scale = scale;
         }
 
+        public SceneObject(Model model, Vector3 position, Vector3 rotation, Vector3 scale)
+        {
+            Model = model;
+            Position = position;
+            Rotation = rotation;
+            Scale = scale;
+        }
+
         public Matrix4 GetModelMatrix()
         {
             return Matrix4.CreateScale(Scale) *

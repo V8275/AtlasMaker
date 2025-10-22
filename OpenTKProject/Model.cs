@@ -23,7 +23,8 @@ namespace OpenTKProject
         public Model(Model m)
         {
             SetVModel(m.vModel.PathToModel);
-            SetTexture(m.Texture.PathToTexture);
+            if(m.Texture != null)
+                SetTexture(m.Texture.PathToTexture);
             SetShader(m.shader.PathToVecShader, m.shader.PathToFragShader);
         }
 
