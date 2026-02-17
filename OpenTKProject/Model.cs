@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace OpenTKProject
+﻿namespace OpenTKProject
 {
     public class Model
     {

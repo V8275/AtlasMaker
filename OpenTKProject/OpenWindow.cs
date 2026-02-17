@@ -12,8 +12,8 @@ namespace OpenTKProject
         private readonly Vector3 globalLightPos = new Vector3(1.2f, 1.0f, 2.0f);
         private readonly Color lightColor = Color.AntiqueWhite;
 
-        private string defaultVertShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
-        private string defaultFragShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
+        private string defaultVertShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
+        private string defaultFragShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
 
         CameraController cameraController;
 
@@ -47,11 +47,12 @@ namespace OpenTKProject
             List<Model> models = new List<Model>();
 
             models.Add(new Model(SetupModel(@"Models/untitled.obj", @"Models/Textures/TexTest.jpg")));
+            models.Add(new Model(SetupModel(@"Models/Plane.obj", @"Models/Textures/MossStone.jpg")));
 
             Model lightmodel = new Model(SetupModel(@"Models/Frog3.obj", @"Models/Textures/Frog3Texture.jpg"));
-            Model HDRI = new Model(SetupModel(@"Models/SkyBox.obj", @"Models/Textures/Frog3Texture.jpg",
-                "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\HDRIShader.vert",
-                "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\HDRIShader.frag"));
+            //Model HDRI = new Model(SetupModel(@"Models/SkyBox.obj", @"Models/Textures/Frog3Texture.jpg",
+            //    "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\HDRIShader.vert",
+            //    "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\HDRIShader.frag"));
 
             //,
             //"D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\LightShader.vert",
@@ -63,9 +64,10 @@ namespace OpenTKProject
             models.Add(lightmodel);
 
             sceneObjects.Add(new SceneObject(models[0], new Vector3(0.0f, 0.0f, 0.0f)));
-            sceneObjects.Add(new SceneObject(models[1], new Vector3(2.0f, -1f, 0.0f), new Vector3(0,180,0), new Vector3(10, 10, 10)));
+            sceneObjects.Add(new SceneObject(models[1], new Vector3(0.0f, -1f, 0.0f), new Vector3(0,0,0), new Vector3(10, 10, 10)));
+            sceneObjects.Add(new SceneObject(models[2], new Vector3(2.0f, 2f, 0.0f), new Vector3(0,180,0), new Vector3(10, 10, 10)));
 
-            SetupLight(HDRI);
+            //SetupLight(HDRI);
             foreach (var obj in sceneObjects)
             {
                 if (!modelBuffers.ContainsKey(obj.Model))
@@ -74,7 +76,7 @@ namespace OpenTKProject
                 }
             }
 
-            SetGradientColors(hDRI.Model, new Vector3(0.0f, 0.0f, 1.0f), new Vector3(1.0f, 0.0f, 0.0f));
+            //SetGradientColors(hDRI.Model, new Vector3(0.0f, 0.0f, 1.0f), new Vector3(1.0f, 0.0f, 0.0f));
         }
 
         private void SetGradientColors(Model model, Vector3 bottomColor, Vector3 topColor)
@@ -144,7 +146,7 @@ namespace OpenTKProject
 
             KeyboardState input = KeyboardState;
             cameraController.Move(input, (float)e.Time);
-            hDRI.Position = cameraController.Position;
+            //hDRI.Position = cameraController.Position;
 
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 

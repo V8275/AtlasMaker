@@ -1,5 +1,4 @@
-﻿using System.IO;
-using JeremyAnsel.Media.WavefrontObj;
+﻿using JeremyAnsel.Media.WavefrontObj;
 
 namespace OpenTKProject
 {
