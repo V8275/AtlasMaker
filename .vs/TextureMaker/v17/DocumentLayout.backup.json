@@ -7,8 +7,16 @@
       "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\openwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shaders\\frag\\shadow.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\frag\\shadow.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shaders\\vert\\shadow.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\vert\\shadow.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shaders\\vert\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -19,40 +27,8 @@
       "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\frag\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\sceneobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\sceneobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\model.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shaders\\frag\\lightshader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\frag\\lightshader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shaders\\frag\\hdrishader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\frag\\hdrishader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\texture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\modelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\modelloader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shaders\\vert\\lightshader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\vert\\lightshader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shaders\\vert\\hdrishader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\vert\\hdrishader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\projects\\vsprojects\\texturemaker\\opentkproject\\shadowmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shadowmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,7 +37,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 197,
           "SelectedChildIndex": 0,
           "Children": [
             {
@@ -70,9 +46,9 @@
               "Title": "OpenWindow.cs",
               "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\OpenWindow.cs",
               "RelativeDocumentMoniker": "OpenTKProject\\OpenWindow.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\OpenWindow.cs*",
-              "RelativeToolTip": "OpenTKProject\\OpenWindow.cs*",
-              "ViewState": "AgIAACYAAAAAAAAAAAAiwEIAAAB9AAAAAAAAAA==",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\OpenWindow.cs",
+              "RelativeToolTip": "OpenTKProject\\OpenWindow.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAowD4AAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-08T12:23:33.477Z",
               "IsPinned": true,
@@ -80,151 +56,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "HDRIShader.vert",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\HDRIShader.vert",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Vert\\HDRIShader.vert",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\HDRIShader.vert",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Vert\\HDRIShader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-16T20:11:46.475Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HDRIShader.frag",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\HDRIShader.frag",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Frag\\HDRIShader.frag",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\HDRIShader.frag",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Frag\\HDRIShader.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-16T20:01:05.579Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "shader.frag",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "ViewState": "AgIAABwAAAAAAAAAAAAYwDMAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-09T17:59:22.958Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "shader.vert",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-09T17:57:50.72Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "LightShader.frag",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\LightShader.frag",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Frag\\LightShader.frag",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\LightShader.frag",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Frag\\LightShader.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-15T19:51:13.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "LightShader.vert",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\LightShader.vert",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Vert\\LightShader.vert",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\LightShader.vert",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Vert\\LightShader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-10-15T19:49:54.993Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SceneObject.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\SceneObject.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\SceneObject.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\SceneObject.cs",
-              "RelativeToolTip": "OpenTKProject\\SceneObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAMAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-15T19:16:41.795Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ModelLoader.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\ModelLoader.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\ModelLoader.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\ModelLoader.cs",
-              "RelativeToolTip": "OpenTKProject\\ModelLoader.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T20:34:13.49Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Model.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Model.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\Model.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Model.cs",
-              "RelativeToolTip": "OpenTKProject\\Model.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T19:09:36.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Program.cs",
               "RelativeDocumentMoniker": "OpenTKProject\\Program.cs",
               "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Program.cs",
               "RelativeToolTip": "OpenTKProject\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T18:19:50.369Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Shader.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shader.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shader.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shader.cs",
-              "RelativeToolTip": "OpenTKProject\\Shader.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBsAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T18:07:34.873Z",
+              "WhenOpened": "2026-02-17T19:11:31.227Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Texture.cs",
-              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Texture.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\Texture.cs",
-              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Texture.cs",
-              "RelativeToolTip": "OpenTKProject\\Texture.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "shadow.frag",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shadow.frag",
+              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Frag\\shadow.frag",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shadow.frag",
+              "RelativeToolTip": "OpenTKProject\\Shaders\\Frag\\shadow.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T18:53:52.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "shadow.vert",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shadow.vert",
+              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Vert\\shadow.vert",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shadow.vert",
+              "RelativeToolTip": "OpenTKProject\\Shaders\\Vert\\shadow.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T18:53:42.022Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ShadowMap.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\ShadowMap.cs",
+              "RelativeDocumentMoniker": "OpenTKProject\\ShadowMap.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\ShadowMap.cs",
+              "RelativeToolTip": "OpenTKProject\\ShadowMap.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwEoAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T18:06:55.941Z"
+              "WhenOpened": "2026-02-17T18:44:21.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "shader.vert",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert",
+              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Vert\\shader.vert",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert",
+              "RelativeToolTip": "OpenTKProject\\Shaders\\Vert\\shader.vert",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T18:05:35.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "shader.frag",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag",
+              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Frag\\shader.frag",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag",
+              "RelativeToolTip": "OpenTKProject\\Shaders\\Frag\\shader.frag",
+              "ViewState": "AgIAACEAAAAAAAAAAAAwwE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-17T18:05:34.496Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -9,17 +9,24 @@ namespace OpenTKProject
 {
     public class OpenWindow : GameWindow
     {
-        private readonly Vector3 globalLightPos = new Vector3(1.2f, 1.0f, 2.0f);
+        private readonly Vector3 globalLightPos = new Vector3(-5f, 3.0f, 3f);
         private readonly Color lightColor = Color.AntiqueWhite;
 
         private string defaultVertShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";//"D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
         private string defaultFragShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";//"D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
 
+        private string shadowVertShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shadow.vert";
+        private string shadowFragShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shadow.frag";
+
         CameraController cameraController;
+        ShadowMap shadowMap;
+        Shader shadowShader;
 
         private float _lastX;
         private float _lastY;
         private bool _firstMove = true;
+
+        private int ShadowMapSize = 2048;
 
         public OpenWindow(int width, int height, string title) :
             base(GameWindowSettings.Default, new NativeWindowSettings() { Size = (width, height), Title = title })
@@ -43,13 +50,18 @@ namespace OpenTKProject
 
             cameraController = new CameraController(1.5f, new Vector3(0.0f, 0.0f, 3.0f));
 
+            shadowMap = new ShadowMap(ShadowMapSize, ShadowMapSize);
+            shadowShader = new Shader(shadowVertShader, shadowFragShader);
+
             List<Model> models = new List<Model>();
 
             models.Add(new Model(SetupModel(@"Models/Plane.obj", @"Models/Textures/MossStone.jpg")));
             models.Add(new Model(SetupModel(@"Models/Frog3.obj", @"Models/Textures/Frog3Texture.jpg")));
+            models.Add(new Model(SetupModel(@"Models/Sphere.obj", @"Models/Textures/DefaultTexture.jpg")));
 
             sceneObjects.Add(new SceneObject(models[0], new Vector3(0.0f, -1f, 0.0f), new Vector3(0,0,0), new Vector3(1, 1, 1)));
-            sceneObjects.Add(new SceneObject(models[1], new Vector3(0f, -1f, 0f), new Vector3(0,180,0), new Vector3(10, 10, 10)));
+            sceneObjects.Add(new SceneObject(models[1], new Vector3(0f, -1f, 0f), new Vector3(0, 3,0), new Vector3(10, 10, 10)));
+            sceneObjects.Add(new SceneObject(models[2], globalLightPos, new Vector3(0, 0, 0), new Vector3(0.5f, 0.5f, 0.5f)));
 
             foreach (var obj in sceneObjects)
             {
@@ -58,6 +70,44 @@ namespace OpenTKProject
                     SetupModelBuffers(obj.Model);
                 }
             }
+        }
+
+        private Matrix4 GetLightSpaceMatrix()
+        {
+            float nearPlane = 1.0f;
+            float farPlane = 10.0f;
+
+            Matrix4 lightProjection = Matrix4.CreateOrthographicOffCenter(-10.0f, 10.0f, -10.0f, 10.0f, nearPlane, farPlane);
+
+            Matrix4 lightView = Matrix4.LookAt(globalLightPos, Vector3.Zero, Vector3.UnitY);
+
+            return lightView * lightProjection;
+        }
+
+        private void RenderShadowMap()
+        {
+            shadowMap.Use();
+
+            Matrix4 lightSpaceMatrix = GetLightSpaceMatrix();
+            shadowShader.Use();
+            shadowShader.SetMatrix4("lightSpaceMatrix", lightSpaceMatrix);
+
+            foreach (var obj in sceneObjects)
+            {
+                Matrix4 modelMatrix = obj.GetModelMatrix();
+                shadowShader.SetMatrix4("model", modelMatrix);
+
+                var buffers = modelBuffers[obj.Model];
+                GL.BindVertexArray(buffers.vao);
+                GL.DrawElements(PrimitiveType.Triangles, obj.Model.VModel.Indices.Count,
+                               DrawElementsType.UnsignedInt, 0);
+            }
+
+            GL.CullFace(CullFaceMode.Back);
+            GL.BindFramebuffer(FramebufferTarget.Framebuffer, 0);
+
+            GL.Viewport(0, 0, Size.X, Size.Y);
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
         }
 
         private Model SetupModel(string modelPath, string texturePath = "", string vertShader = "", string fragShader = "")
@@ -123,6 +173,8 @@ namespace OpenTKProject
 
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
 
+            RenderShadowMap();
+
             foreach (var obj in sceneObjects)
             {
                 RenderModel(obj);
@@ -139,19 +191,26 @@ namespace OpenTKProject
                 (float)Size.X / (float)Size.Y, 0.1f, 100.0f);
 
             Matrix4 modelMatrix = sceneObj.GetModelMatrix();
+            Matrix4 lightSpaceMatrix = GetLightSpaceMatrix();
 
             sceneObj.Model.Shader.Use();
 
-            if(sceneObj.Model.Texture != null)
+            if (sceneObj.Model.Texture != null)
             {
                 GL.ActiveTexture(TextureUnit.Texture0);
                 GL.BindTexture(TextureTarget.Texture2D, sceneObj.Model.Texture.Handle);
                 sceneObj.Model.Shader.SetInt("texture0", 0);
             }
 
+            GL.ActiveTexture(TextureUnit.Texture1);
+            GL.BindTexture(TextureTarget.Texture2D, shadowMap.DepthMapTexture);
+            sceneObj.Model.Shader.SetInt("shadowMap", 1);
+
             sceneObj.Model.Shader.SetMatrix4("model", modelMatrix);
             sceneObj.Model.Shader.SetMatrix4("view", view);
             sceneObj.Model.Shader.SetMatrix4("projection", projection);
+            sceneObj.Model.Shader.SetMatrix4("lightSpaceMatrix", lightSpaceMatrix);
+
             sceneObj.Model.Shader.SetVector3("viewPos", cameraController.Position);
 
             sceneObj.Model.Shader.SetVector3("material.ambient", ColorToVec3(lightColor));
