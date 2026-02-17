@@ -474,23 +474,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\VLAD-L\\.nuget\\packages\\": {},
+    "C:\\Users\\Vlad-PC\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Development\\AtlasMaker\\TextureMaker.csproj",
+      "projectUniqueName": "D:\\Projects\\VSProjects\\TextureMaker\\TextureMaker.csproj",
       "projectName": "TextureMaker",
-      "projectPath": "D:\\Development\\AtlasMaker\\TextureMaker.csproj",
-      "packagesPath": "C:\\Users\\VLAD-L\\.nuget\\packages\\",
-      "outputPath": "D:\\Development\\AtlasMaker\\obj\\",
+      "projectPath": "D:\\Projects\\VSProjects\\TextureMaker\\TextureMaker.csproj",
+      "packagesPath": "C:\\Users\\Vlad-PC\\.nuget\\packages\\",
+      "outputPath": "D:\\Projects\\VSProjects\\TextureMaker\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\VLAD-L\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Vlad-PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -517,7 +517,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "9.0.100"
     },
     "frameworks": {
       "net9.0-windows7.0": {
@@ -555,16 +555,8 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1900",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Произошла ошибка при получении данных уязвимости пакета: Не удалось загрузить индекс службы для источника https://api.nuget.org/v3/index.json."
-    }
-  ]
+  }
 }
