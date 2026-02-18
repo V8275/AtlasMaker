@@ -12,11 +12,11 @@ namespace OpenTKProject
         private readonly Vector3 globalLightPos = new Vector3(-5f, 3.0f, 3f);
         private readonly Color lightColor = Color.AntiqueWhite;
 
-        private string defaultVertShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";//"D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
-        private string defaultFragShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";//"D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
+        private string defaultVertShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert";
+        private string defaultFragShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag";
 
-        private string shadowVertShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Vert\\shadow.vert";
-        private string shadowFragShader = "D:\\Projects\\VSProjects\\TextureMaker\\OpenTKProject\\Shaders\\Frag\\shadow.frag";
+        private string shadowVertShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shadow.vert";
+        private string shadowFragShader = "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shadow.frag";
 
         CameraController cameraController;
         ShadowMap shadowMap;
@@ -59,12 +59,13 @@ namespace OpenTKProject
             models.Add(new Model(SetupModel(@"Models/Frog3.obj", @"Models/Textures/Frog3Texture.jpg")));
             models.Add(new Model(SetupModel(@"Models/Sphere.obj", @"Models/Textures/DefaultTexture.jpg")));
 
-            sceneObjects.Add(new SceneObject(models[0], new Vector3(0.0f, -1f, 0.0f), new Vector3(0,0,0), new Vector3(1, 1, 1)));
-            sceneObjects.Add(new SceneObject(models[1], new Vector3(0f, -1f, 0f), new Vector3(0, 3,0), new Vector3(10, 10, 10)));
+            sceneObjects.Add(new SceneObject(models[0], new Vector3(0.0f, -1f, 0.0f), new Vector3(0, 0, 0), new Vector3(1, 1, 1)));
+            sceneObjects.Add(new PathMover(models[1], new Vector3(1, -1f, -1), new Vector3(0, 3, 0), new Vector3(10, 10, 10)));
             sceneObjects.Add(new SceneObject(models[2], globalLightPos, new Vector3(0, 0, 0), new Vector3(0.5f, 0.5f, 0.5f)));
 
             foreach (var obj in sceneObjects)
             {
+                obj.Start();
                 if (!modelBuffers.ContainsKey(obj.Model))
                 {
                     SetupModelBuffers(obj.Model);
@@ -114,7 +115,7 @@ namespace OpenTKProject
         {
             Model model = new Model();
             model.SetVModel(modelPath);
-            if(!String.IsNullOrEmpty(texturePath)) model.SetTexture(texturePath);
+            if (!String.IsNullOrEmpty(texturePath)) model.SetTexture(texturePath);
 
             if (String.IsNullOrEmpty(vertShader) || String.IsNullOrEmpty(fragShader))
                 model.SetShader(defaultVertShader, defaultFragShader);
@@ -248,6 +249,9 @@ namespace OpenTKProject
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
             base.OnUpdateFrame(e);
+            float deltaTime = (float)e.Time;
+
+            sceneObjects[1].Update(deltaTime);
 
             if (KeyboardState.IsKeyDown(Keys.Escape))
             {

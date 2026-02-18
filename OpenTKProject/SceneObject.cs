@@ -32,6 +32,16 @@ namespace OpenTKProject
             Scale = scale;
         }
 
+        public virtual void Start()
+        {
+
+        }
+
+        public virtual void Update(float time)
+        {
+
+        }
+
         public Matrix4 GetModelMatrix()
         {
             return Matrix4.CreateScale(Scale) *
