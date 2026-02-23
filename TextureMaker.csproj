@@ -1,26 +1,25 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>WinExe</OutputType>
-    <TargetFramework>net9.0-windows</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <UseWPF>true</UseWPF>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net9.0-windows</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Remove="eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="JeremyAnsel.Media.WavefrontObj" Version="3.0.58" />
-    <PackageReference Include="OpenTK" Version="4.9.4" />
-    <PackageReference Include="StbImageSharp" Version="2.30.15" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="JeremyAnsel.Media.WavefrontObj" Version="3.0.58" />
+		<PackageReference Include="StbImageSharp" Version="2.30.15" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Resource Include="eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg" />
-  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="eb07b1f8cf311f0aaca16d0d2272db5_1.jpeg" />
+	</ItemGroup>
 
 </Project>

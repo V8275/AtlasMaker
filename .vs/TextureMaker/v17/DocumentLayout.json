@@ -1,46 +1,26 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Development\\AtlasMaker\\",
+  "WorkspaceRootPath": "D:\\Projects\\VSProjects\\TextureMaker\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\openwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\openwindow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\pathmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\pathmover.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\core\\bitmapsaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:core\\bitmapsaver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\sceneobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\sceneobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\core\\rgbcombinemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:core\\rgbcombinemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\cameracontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\texturemaker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:texturemaker.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\shadowmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shadowmap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\shaders\\vert\\shadow.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\vert\\shadow.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\shaders\\frag\\shadow.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\frag\\shadow.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\shaders\\vert\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\vert\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|d:\\development\\atlasmaker\\opentkproject\\shaders\\frag\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{FC4AEA74-283C-437F-A1CF-6039641CDFA0}|OpenTKProject\\OpenTKProject.csproj|solutionrelative:opentkproject\\shaders\\frag\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|d:\\projects\\vsprojects\\texturemaker\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{49B99B33-265B-4AA2-A287-5046C16B215A}|TextureMaker.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,136 +30,71 @@
       "DocumentGroups": [
         {
           "DockedWidth": 197,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OpenWindow.cs",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\OpenWindow.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\OpenWindow.cs",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\OpenWindow.cs",
-              "RelativeToolTip": "OpenTKProject\\OpenWindow.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAYwD4AAABNAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "BitmapSaver.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\BitmapSaver.cs",
+              "RelativeDocumentMoniker": "Core\\BitmapSaver.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\BitmapSaver.cs",
+              "RelativeToolTip": "Core\\BitmapSaver.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T12:23:33.477Z",
-              "IsPinned": true,
+              "WhenOpened": "2026-02-23T20:41:49.892Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "SceneObject.cs",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\SceneObject.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\SceneObject.cs",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\SceneObject.cs",
-              "RelativeToolTip": "OpenTKProject\\SceneObject.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Title": "RGBCombineManager.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\RGBCombineManager.cs",
+              "RelativeDocumentMoniker": "Core\\RGBCombineManager.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\Core\\RGBCombineManager.cs",
+              "RelativeToolTip": "Core\\RGBCombineManager.cs",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAnwFEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T07:44:39.236Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PathMover.cs",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\PathMover.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\PathMover.cs",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\PathMover.cs",
-              "RelativeToolTip": "OpenTKProject\\PathMover.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBgAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T07:02:44.901Z",
+              "WhenOpened": "2026-02-23T20:40:31.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CameraController.cs",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\CameraController.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\CameraController.cs",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\CameraController.cs",
-              "RelativeToolTip": "OpenTKProject\\CameraController.cs",
-              "ViewState": "AgIAAGQAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-18T06:57:00.207Z",
+              "Title": "TextureMaker.csproj",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\TextureMaker.csproj",
+              "RelativeDocumentMoniker": "TextureMaker.csproj",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\TextureMaker.csproj",
+              "RelativeToolTip": "TextureMaker.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-22T21:00:43.62Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\Program.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\Program.cs",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\Program.cs",
-              "RelativeToolTip": "OpenTKProject\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T19:11:31.227Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "shadow.frag",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shadow.frag",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Frag\\shadow.frag",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shadow.frag",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Frag\\shadow.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-17T18:53:52.906Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "shadow.vert",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shadow.vert",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Vert\\shadow.vert",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shadow.vert",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Vert\\shadow.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-17T18:53:42.022Z",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-02-22T20:57:35.261Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ShadowMap.cs",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\ShadowMap.cs",
-              "RelativeDocumentMoniker": "OpenTKProject\\ShadowMap.cs",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\ShadowMap.cs",
-              "RelativeToolTip": "OpenTKProject\\ShadowMap.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAJAAAAAAAAAA==",
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "D:\\Projects\\VSProjects\\TextureMaker\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAKUAAAAAAAAAAAAAAMEAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-17T18:44:21.393Z",
+              "WhenOpened": "2026-02-22T20:57:33.955Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "shader.vert",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Vert\\shader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-17T18:05:35.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "shader.frag",
-              "DocumentMoniker": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "RelativeDocumentMoniker": "OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "ToolTip": "D:\\Development\\AtlasMaker\\OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "RelativeToolTip": "OpenTKProject\\Shaders\\Frag\\shader.frag",
-              "ViewState": "AgIAACEAAAAAAAAAAAAwwE0AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-17T18:05:34.496Z"
             }
           ]
         }

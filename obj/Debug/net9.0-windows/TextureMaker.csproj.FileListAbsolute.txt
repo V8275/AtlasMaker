@@ -32,3 +32,7 @@ D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.dll
 D:\Development\AtlasMaker\obj\Debug\net9.0-windows\refint\TextureMaker.dll
 D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.pdb
 D:\Development\AtlasMaker\obj\Debug\net9.0-windows\TextureMaker.csproj.AssemblyReference.cache
+D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureMaker.csproj.AssemblyReference.cache
+D:\Projects\VSProjects\TextureMaker\bin\Debug\net9.0-windows\JeremyAnsel.Media.WavefrontObj.dll
+D:\Projects\VSProjects\TextureMaker\bin\Debug\net9.0-windows\StbImageSharp.dll
+D:\Projects\VSProjects\TextureMaker\obj\Debug\net9.0-windows\TextureM.16917F45.Up2Date

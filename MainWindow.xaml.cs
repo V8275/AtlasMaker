@@ -91,7 +91,7 @@ namespace TextureMaker
 
         private void SelectFiles()
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog() {
+            Microsoft.Win32.OpenFileDialog openFileDialog = new Microsoft.Win32.OpenFileDialog() {
                 Title = "Выберите файлы",
                 Filter = "Все файлы (*.*)|*.png|*.jpg|*.jpeg",
                 Multiselect = true
@@ -132,7 +132,7 @@ namespace TextureMaker
             for (int i = 0; i < sprites.Length; i++)
             {
                 var bitmap = sprites[i];
-                var image = new Image
+                var image = new System.Windows.Controls.Image
                 {
                     Source = bitmap.OriginalImage,
                     Stretch = Stretch.Uniform
@@ -145,7 +145,7 @@ namespace TextureMaker
             }
         }
 
-        private void ShowImage(Image img, BitmapImage image)
+        private void ShowImage(System.Windows.Controls.Image img, BitmapImage image)
         {
             img.Source = image;
             img.Stretch = Stretch.Uniform;
